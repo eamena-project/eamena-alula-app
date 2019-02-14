@@ -1,0 +1,15 @@
+Source,Target,Type,Id,Label,timeset,Weight
+335,336,Directed,3049,P1,,1
+337,338,Directed,3050,-P71,,1
+339,340,Directed,3051,-P71,,1
+341,342,Directed,3052,-P71,,1
+344,345,Directed,3053,-P71,,1
+346,347,Directed,3054,-P71,,1
+150,334,Directed,3055,-P140,,1
+334,335,Directed,3056,P14,,1
+334,337,Directed,3057,P141,,1
+334,339,Directed,3058,P141,,1
+334,341,Directed,3059,P2,,1
+343,344,Directed,3060,J5,,1
+343,346,Directed,3061,J4,,1
+334,343,Directed,3062,P141,,1
