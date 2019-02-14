@@ -1,0 +1,111 @@
+<!--
+ARCHES - a program developed to inventory and manage immovable cultural heritage.
+Copyright © 2013 J. Paul Getty Trust and World Monuments Fund
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+{% extends "base.htm" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'plugins/layer_slider/css/layerslider.css' %}" type="text/css">
+{{ block.super }}
+{% endblock css %}
+
+{% block content %}
+
+
+
+<!--=== Slider ===-->
+<div class="layer_slider">
+    <div id="layerslider-container-fw">        
+        <div id="layerslider">
+          <!--First Slide-->
+            <div class="ls-layer">
+                
+                <!-- Background -->
+                <img src="{% static 'img/Slide1.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                    
+                    <!-- Text -->
+                    <span class="ls-s-s1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                        {% trans 'Royal Commission for Al Ula - Heritage Database' %} </br>
+               
+                    </span>
+                    
+                    <!-- Photo Credit -->
+                    <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:670px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;background-color: #585f69;">
+                        {% trans "Photo: Mada'in Saleh - Jabal Khraymat II-III Tombs " %}<a href="javascript:void(0);" style='color:#fff;'>{% trans '© Royal Commission for Al-Ula' %}</a>
+                    </span>
+                    
+                    </div>
+            <!--End First Slide-->
+          <!--Second Slide-->
+            <div class="ls-layer" style="">
+                
+                <!-- Background -->
+                <img src="{% static 'img/Slide2.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                    
+                    <!-- Text -->
+                    <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                        {% trans 'Royal Commission for Al Ula - Heritage Database' %} </br>
+                    </span>
+                    
+                    <!-- Photo Credit -->
+                    <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:670px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;background-color: #585f69;">
+                        {% trans 'Photo: Al-Mabiyat (Qurh) ' %}<a href="javascript:void(0);" style='color:#fff;'>{% trans '© Royal Commission for Al-Ula' %}</a>
+                    </span>
+                    
+                    </div>
+            <!--End Second Slide-->
+            
+          <!--Third Slide-->
+            <div class="ls-layer" style="">
+                
+                <!-- Background -->
+                <img src="{% static 'img/Slide3.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                    
+                    <!-- Text -->
+                    <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                    {% trans 'Royal Commission for Al Ula - Heritage Database' %} </br>
+                    </span>
+                    
+                    <!-- Photo Credit -->
+                    <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:670px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;background-color: #585f69;">
+                        {% trans 'Photo: Al-Khuraybah (Dadan) ' %}<a href="javascript:void(0);" style='color:#fff;'>{% trans '© Royal Commission for Al-Ula' %}</a>
+                    </span>
+                    
+                    </div>
+            <!--End Third Slide-->
+            
+          <!--Fourth Slide-->
+            <div class="ls-layer" style="">
+                
+                <!-- Background -->
+                <img src="{% static 'img/Slide4.jpg' %}" class="ls-s3" style="max-width: 2000px !important; top: -50px; left: -550px; durationin: 0;" alt="Slide background">
+                    
+                    <!-- Text -->
+                    <span class="ls-s-1" style="line-height: 42px; font-size:42px; font-weight: 200; color:#fff; top:50px; left: -70px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;">
+                        {% trans 'Royal Commission for Al Ula - Heritage Database' %} </br>
+                    </span>
+                    
+                    <!-- Photo Credit -->
+                    <span class="ls-s-1" style="line-height: 16px; font-size:12px; color:#fff; top:670px; left: 750px; slidedirection: top; slideoutdirection: bottom; durationin: 0; durationout: 3500;background-color: #585f69;">
+                        {% trans 'Photo: Burials in the al Ula region ' %}<a href="javascript:void(0);" style='color:#fff;'>{% trans '© Royal Commission for Al-Ula' %}</a>
+                    </span>
+                    
+                    </div>
+            <!--End Fourth Slide-->
+            
+    
+{% endblock %}
