@@ -1,3 +1,7 @@
+eamena/eamena/settings_local.py
+eamena/eamena/elasticsearch
+eamena/eamena/logs/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
