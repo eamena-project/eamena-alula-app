@@ -53,7 +53,7 @@ ID_LENGTH = 7 #Indicates the length of the Unique Resource IDs after the set tag
 
 def RESOURCE_TYPE_CONFIGS():
     return {
-        'HERITAGE_RESOURCE_GROUP.E27': {
+        'HERITAGE_PLACE.E27': {
             'resourcetypeid': 'HERITAGE_RESOURCE_GROUP.E27',
             'name': _('Heritage Place'),
             'icon_class': 'fa fa-stop',
