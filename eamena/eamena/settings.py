@@ -3,6 +3,8 @@ import inspect
 from arches.settings import *
 from django.utils.translation import ugettext as _
 
+APP_NAME = 'Al Ula Database'
+
 PACKAGE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 PACKAGE_NAME = PACKAGE_ROOT.split(os.sep)[-1]
 
@@ -228,12 +230,7 @@ ACTOR_NODES = [
     ('THREAT_INFERENCE_MAKING_ASSESSOR_NAME.E41', 'THREAT_INFERENCE_MAKING.I5', 'THREAT_TYPE.E55'),
 ]
 
-
-APP_NAME = 'eamena'
-
-
 DATE_PARSING_FORMAT = ['%B %d, %Y', '%Y-%m-%d', '%Y-%m-%d %H:%M:%S']
-
 
 LOGGING = {
     'version': 1,
