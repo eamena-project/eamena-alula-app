@@ -28,6 +28,8 @@ urlpatterns = patterns('',
     url(r'^reports/(?P<resourceid>%s)$' % uuid_regex , 'eamena.views.resources.report', name='report'),
     url('^', include('django.contrib.auth.urls')),
     url(r'^search/overlaps', 'eamena.views.search.find_overlapping', name="find_overlapping_data"),
+    url(r'^rdm/(?P<conceptid>%s|())$' % uuid_regex , 'eamena.views.concept.rdm', name='rdm'),
+    url(r'^concepts/(?P<conceptid>%s|())$' % uuid_regex , 'eamena.views.concept.concept', name="concept"),
     url(r'', include(arches_urls)),
 )
 
