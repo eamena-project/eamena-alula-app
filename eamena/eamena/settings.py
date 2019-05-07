@@ -21,7 +21,7 @@ LOCALE_PATHS = (os.path.join(PACKAGE_ROOT, '../locale'),)
 BULK_UPLOAD_DIR =  os.path.join(PACKAGE_ROOT, 'bulk_upload')
 BULK_UPLOAD_LOG_FILE = os.path.join(PACKAGE_ROOT, 'logs', 'bulk_upload_log.txt')
 
-DATABASES['default']['NAME'] = 'eamena_alula'
+DATABASES['default']['NAME'] = 'arches_alula'
 
 try:
     from settings_local import GDAL_LIBRARY_PATH
