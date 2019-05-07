@@ -20,7 +20,7 @@
                                 <input class="select2 arches-select2-crud-form arches-form-input-40" data-bind="select2: {value: getEditedNode('INVESTIGATOR_ROLE_TYPE.E55', 'value'), placeholder: '{% trans "Investigator Role" %}', dataKey: 'INVESTIGATOR_ROLE_TYPE.E55'}"></input>
                                 <br>
                                 <!-- Type of Activity -->
-                                <input style="padding-top: 2px;" class="select2 arches-select2-crud-form arches-form-input-40" data-bind="select2: {value: getEditedNode('ACTIVITY_TYPE.E55', 'value'), placeholder: '{% trans "Type of Activity" %}', dataKey: 'ACTIVITY_TYPE.E55'}"></input>
+                                <input style="padding-top: 2px;" class="select2 arches-select2-crud-form arches-form-input-40" data-bind="select2: {value: getEditedNode('ASSESSMENT_ACTIVITY_TYPE.E55', 'value'), placeholder: '{% trans "Type of Activity" %}', dataKey: 'ASSESSMENT_ACTIVITY_TYPE.E55'}"></input>
                                 <!-- Date of Activity -->
                                 <div class="form-group datetimepicker arches-form-input-40" style="padding-top: 2px;">
                                     <div class="input-group">
@@ -55,7 +55,7 @@
                                     <span class="text-muted arches-crud-type-identifier">
                                         (<span data-bind='text: nodes.get("INVESTIGATOR_ROLE_TYPE.E55", "label")'></span>)
                                     </span>
-                                    <span data-bind='{text: nodes.get("ACTIVITY_TYPE.E55", "label")}' style="padding-right:2px;"></span><span class="text-muted">{% trans '( Assessment Type )' %}</span>                                  
+                                    <span data-bind='{text: nodes.get("ASSESSMENT_ACTIVITY_TYPE.E55", "label")}' style="padding-right:2px;"></span><span class="text-muted">{% trans '( Assessment Type )' %}</span>
                                     <span data-bind="{text: nodes.get('DATE_OF_ACTIVITY.E48', 'value')}" style="padding-right:2px"></span><span class="text-muted">{% trans '( Date of Assessment )' %}</span>
                                 </a>
                             </div>
