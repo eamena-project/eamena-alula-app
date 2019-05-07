@@ -1,5 +1,6 @@
 eamena/eamena/settings_local.py
 eamena/eamena/elasticsearch
+eamena/eamena/uploadedfiles
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
