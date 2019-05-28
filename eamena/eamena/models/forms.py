@@ -284,7 +284,7 @@ class FindAssessmentSummaryForm(ResourceForm):
                 'branch_lists': datetime_nodes_to_dates(self.get_nodes('INVESTIGATION_ACTIVITY.E7')),
                 'domains': {
                     'INVESTIGATOR_ROLE_TYPE.E55' : Concept().get_e55_domain('INVESTIGATOR_ROLE_TYPE.E55'),
-                    'ACTIVITY_TYPE.E55' : Concept().get_e55_domain('ACTIVITY_TYPE.E55'),
+                    'ASSESSMENT_ACTIVITY_TYPE.E55' : Concept().get_e55_domain('ASSESSMENT_ACTIVITY_TYPE.E55'),
                 }
             }
 
