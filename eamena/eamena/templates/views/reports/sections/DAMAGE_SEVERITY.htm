@@ -20,7 +20,13 @@
                                     {% endfor %}
                     
                                 {% endfor %}
-                            {% endif %} 
+                            {% elif 'DAMAGE_SEVERITY_TYPE_E55' in DAMAGE_STATE_E3 %}
+                                {% for DAMAGE_SEVERITY_TYPE_E55 in DAMAGE_STATE_E3.DAMAGE_SEVERITY_TYPE_E55 %}
+                                    <dd class="arches-report-subsection-item">
+                                        {{ DAMAGE_SEVERITY_TYPE_E55.DAMAGE_SEVERITY_TYPE_E55__value }}
+                                    </dd>
+                                {% endfor %}
+                            {% endif %}
                         {% endfor %}    
                     {% endif %}
                 {% endfor %}    
