@@ -1,0 +1,54 @@
+{% load i18n %}
+<div class="row">
+     <div class="col-xs-12">
+        <dl>
+            <dt>
+                <h5 id="" class="arches-report-subsection-title">{% trans "Modification and Constructions(s)" %}</h5>
+            </dt>
+                <dd class="arches-report-subsection-item dataalert">
+                        {% trans "No Modifications recorded" %}
+                </dd>
+            <div class = "content">
+            {% for MODIFICATION_E11 in report_info.source.graph.MODIFICATION_E11 %}
+                {% if 'MODIFICATION_TYPE_E55' in MODIFICATION_E11 %}
+
+                    {% for MODIFICATION_TYPE_E55 in MODIFICATION_E11.MODIFICATION_TYPE_E55 %}
+                        <dd class="arches-report-subsection-item">
+                            {{ MODIFICATION_TYPE_E55.MODIFICATION_TYPE_E55__value }} <span class="arches-report-subsection-item-type">( {% trans "Type" %} )</span>
+                        </dd>
+                    {% endfor %}
+                {% endif %}
+                {% if 'CONSTRUCTION_MATERIAL_E57' in MODIFICATION_E11 %}
+
+                    {% for CONSTRUCTION_MATERIAL_E57 in MODIFICATION_E11.CONSTRUCTION_MATERIAL_E57 %}
+                        <dd class="arches-report-subsection-item">
+                            {{ CONSTRUCTION_MATERIAL_E57.CONSTRUCTION_MATERIAL_E57__value }} <span class="arches-report-subsection-item-type">( {% trans "Material" %} )</span>
+                        </dd>
+                    {% endfor %}
+                {% endif %}
+                {% if 'MODIFICATION_TECHNIQUE_TYPE_E55' in MODIFICATION_E11 %}
+
+                    {% for MODIFICATION_TECHNIQUE_TYPE_E55 in MODIFICATION_E11.MODIFICATION_TECHNIQUE_TYPE_E55 %}
+                        <dd class="arches-report-subsection-item">
+                            {{ MODIFICATION_TECHNIQUE_TYPE_E55.MODIFICATION_TECHNIQUE_TYPE_E55__value }} <span class="arches-report-subsection-item-type">( {% trans "Technique" %} )</span>
+                        </dd>
+                    {% endfor %}
+                {% endif %}
+                {% if 'MODIFICATION_TIMESPAN_E52' in MODIFICATION_E11 %}
+
+                    {% for MODIFICATION_TIMESPAN_E52 in MODIFICATION_E11.MODIFICATION_TIMESPAN_E52 %}
+                        {% if 'MODIFICATION_DATE_E49' in MODIFICATION_TIMESPAN_E52 %}
+                            {% for MODIFICATION_DATE_E49 in MODIFICATION_TIMESPAN_E52.MODIFICATION_DATE_E49 %}
+                                <dd class="arches-report-subsection-item">
+                                    {{ MODIFICATION_DATE_E49.MODIFICATION_DATE_E49__value }} <span class="arches-report-subsection-item-type">( {% trans "Date" %} )</span>
+                                </dd>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+
+            </div>
+        </dl>
+    </div>
+</div>

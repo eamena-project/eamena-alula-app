@@ -18,7 +18,15 @@
                                             {{ DAMAGE_EXTENT_TYPE_E55.DAMAGE_EXTENT_TYPE_E55__value }} 
                                         </dd>
                                     {% endfor %}
-                    
+
+                                {% endfor %}
+                            {% elif 'DAMAGE_EXTENT_E16' in DAMAGE_STATE_E3 %}
+                                {% for DAMAGE_EXTENT_E16 in DAMAGE_STATE_E3.DAMAGE_EXTENT_E16 %}
+                                    {% for DAMAGE_EXTENT_TYPE_E55 in DAMAGE_EXTENT_E16.DAMAGE_EXTENT_TYPE_E55 %}
+                                        <dd class="arches-report-subsection-item">
+                                            {{ DAMAGE_EXTENT_TYPE_E55.DAMAGE_EXTENT_TYPE_E55__value }}
+                                        </dd>
+                                    {% endfor %}
                                 {% endfor %}
                             {% endif %} 
                         {% endfor %}    
