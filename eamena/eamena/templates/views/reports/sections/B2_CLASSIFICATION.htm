@@ -1,0 +1,25 @@
+{% load i18n %}
+<div class="row">
+     <div class="col-xs-12">
+        <dl>
+            <dt>
+                <h5 id="" class="arches-report-subsection-title">{% trans "Classification(s)" %}</h5>
+            </dt>
+                <dd class="arches-report-subsection-item dataalert">
+                        {% trans "No Classification recorded" %}
+                </dd>
+            <div class = "content">
+            {% for COMPONENT_CLASSIFICATION_E17 in report_info.source.graph.COMPONENT_CLASSIFICATION_E17 %}
+                {% if 'COMPONENT_TYPE_E55' in COMPONENT_CLASSIFICATION_E17 %}
+
+                    {% for COMPONENT_TYPE_E55 in COMPONENT_CLASSIFICATION_E17.COMPONENT_TYPE_E55 %}
+                        <dd class="arches-report-subsection-item">
+                            {{ COMPONENT_TYPE_E55.COMPONENT_TYPE_E55__value }}
+                        </dd>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </div>
+        </dl>
+    </div>
+</div>
