@@ -3,6 +3,8 @@ import inspect
 from arches.settings import *
 from django.utils.translation import ugettext as _
 
+DEBUG = False
+
 APP_NAME = 'Al Ula Database'
 
 PACKAGE_ROOT = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
