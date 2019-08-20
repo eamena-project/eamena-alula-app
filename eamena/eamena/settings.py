@@ -208,7 +208,7 @@ ADDITIONAL_RESOURCE_GRAPH_LOCATIONS = (
 )
 
 SKOS_FILE_LOCATION =  os.path.join(PACKAGE_ROOT, 'source_data',
-    'concepts','AlUla-ArchesScheme-Feb5-2019.xml')
+    'concepts','AlUla-ArchesScheme-Aug20-2019.xml')
 
 CONCEPT_SCHEME_LOCATIONS = (
     # Put strings here, like "/home/data/authority_files" or "C:/data/authority_files".
