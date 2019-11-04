@@ -17,6 +17,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 '''
 
 from arches import urls as arches_urls
+#from django.conf import settings
 from django.conf.urls import patterns, url, include
 
 uuid_regex = '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}'
@@ -32,4 +33,9 @@ urlpatterns = patterns('',
     url(r'^concepts/(?P<conceptid>%s|())$' % uuid_regex , 'eamena.views.concept.concept', name="concept"),
     url(r'', include(arches_urls)),
 )
+
+#if 'rosetta' in settings.INSTALLED_APPS:
+#    urlpatterns += [
+#       url(r'^rosetta/', include('rosetta.urls'))
+#    ]
 
