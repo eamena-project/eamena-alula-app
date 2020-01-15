@@ -598,6 +598,14 @@
                      "entitytypeid": "FORM_NUMBER.E55"
                     },
                     {
+                     "field_name": "INTERPRETATION_TYPE.I4",
+                     "entitytypeid": "INTERPRETATION_TYPE.I4"
+                    },
+                    {
+                     "field_name": "INTERPRETATION_CERTAINTY.I6",
+                     "entitytypeid": "INTERPRETATION_CERTAINTY.I6"
+                    },
+                    {
                      "field_name": "MODIFICATION_TYPE.E55",
                      "entitytypeid": "MODIFICATION_TYPE.E55"
                     },
