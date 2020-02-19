@@ -717,7 +717,10 @@
             {"field_name": "ResType","source": "resource_name", "data_type":"str", "data_length":"128"},
             {"field_name": "HerType","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "HerUseType","source": "field_map", "data_type":"str", "data_length":"128"},
-            {"field_name": "Certainty","source": "field_map", "data_type":"str", "data_length":"128"},
+             {"field_name": "Assessor","source": "field_map", "data_type":"str", "data_length":"128"},
+            {"field_name": "Assessor_Role","source": "field_map", "data_type":"str", "data_length":"128"},
+            {"field_name": "Activity_Type","source": "field_map", "data_type":"str", "data_length":"128"},
+            {"field_name": "Activity_Date","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Name","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Name_Type","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Function","source": "field_map", "data_type":"str", "data_length":"128"},
@@ -729,6 +732,7 @@
             {"field_name": "Loc_Cert","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Topography","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Period","source": "field_map", "data_type":"str", "data_length":"128"},
+            {"field_name": "Sub_Period","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Per_Cert","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Form","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Form_Cert","source": "field_map", "data_type":"str", "data_length":"128"},
@@ -739,6 +743,7 @@
             {"field_name": "Inter_Cert","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Inter_No","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Condition","source": "field_map", "data_type":"str", "data_length":"128"},
+            {"field_name": "Priority","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Dist_Extent","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Dist_Type","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Dist_Cause","source": "field_map", "data_type":"str", "data_length":"128"},
@@ -753,8 +758,7 @@
             {"field_name": "ThreatCause","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "ThrCauseCert","source": "field_map", "data_type":"str", "data_length":"128"},
             {"field_name": "Desc_Type","source": "field_map", "data_type":"str", "data_length":"128"},
-            {"field_name": "Description","source": "field_map", "data_type":"str", "data_length":"128"},
-            {"field_name": "Assessor","source": "field_map", "data_type":"str", "data_length":"128"}
+            {"field_name": "Description","source": "field_map", "data_type":"str", "data_length":"128"}
         ],
         "RESOURCE_TYPES": {
             "HERITAGE_RESOURCE_GROUP.E27": {
@@ -777,6 +781,10 @@
                 },
                 {
                 "field_name": "Shape",
+                "entitytypeid": "FEATURE_MORPHOLOGY_TYPE.E55"
+                },
+                {
+                "field_name": "Morphology",
                 "entitytypeid": "SITE_OVERALL_SHAPE_TYPE.E55"
                 },
                 {             
@@ -806,6 +814,10 @@
                 {
                 "field_name": "Period",
                 "entitytypeid": "CULTURAL_PERIOD_TYPE.I4"
+                },
+                {
+                "field_name": "Sub_Period",
+                "entitytypeid": "CULTURAL_PERIOD_DETAIL_TYPE.E55"
                 },
                 {
                 "field_name": "Per_Cert",
@@ -910,6 +922,18 @@
                 {
                 "field_name": "Assessor",
                 "entitytypeid": "INVESTIGATOR_NAME.E41"
+                },
+                 {
+                "field_name": "Assessor_Role",
+                "entitytypeid": "INVESTIGATOR_ROLE_TYPE.E55"
+                },
+                {
+                "field_name": "Activity_Type",
+                "entitytypeid": "ASSESSMENT_ACTIVITY_TYPE.E55"
+                },
+                {
+                "field_name": "Activity_Date",
+                "entitytypeid": "ASSESSMENT_ACTIVITY_DATE.E49"
                 }
                 ]
             },
@@ -950,6 +974,78 @@
                 {
                 "field_name": "Topography",
                 "entitytypeid": "TOPOGRAPHY_TYPE.E55"
+                },
+                {
+                "field_name": "Assessor",
+                "entitytypeid": "INVESTIGATOR_NAME.E41"
+                },
+                {
+                "field_name": "Assessor_Role",
+                "entitytypeid": "INVESTIGATOR_ROLE_TYPE.E55"
+                },
+                {
+                "field_name": "Activity_Type",
+                "entitytypeid": "ASSESSMENT_ACTIVITY_TYPE.E55"
+                },
+                {
+                "field_name": "Activity_Date",
+                "entitytypeid": "ASSESSMENT_ACTIVITY_DATE.E49"
+                },
+                {
+                "field_name": "Form",
+                "entitytypeid": "FORM_TYPE_PROPOSITION_SET.I4"
+                },
+                {
+                "field_name": "Form_Cert",
+                "entitytypeid": "FORM_CERTAINTY_BELIEF_VALUE.I6"
+                },
+                {
+                "field_name": "Feature_No",
+                "entitytypeid": "FORM_NUMBER.E55"
+                },
+                {
+                "field_name": "Feat_Shape",
+                "entitytypeid": "FORM_SHAPE_TYPE.E55"
+                },
+                {
+                "field_name": "Period",
+                "entitytypeid": "CULTURAL_PERIOD_TYPE.I4"
+                },
+                {
+                "field_name": "Sub_Period",
+                "entitytypeid": "CULTURAL_PERIOD_DETAIL_TYPE.E55"
+                },
+                {
+                "field_name": "Per_Cert",
+                "entitytypeid": "CULTURAL_PERIOD_CERTAINTY.I6"
+                },
+                {
+                "field_name": "Arrangement",
+                "entitytypeid": "FORM_ARRANGEMENT.E55"
+                },
+                {
+                "field_name": "Function",
+                "entitytypeid": "FUNCTION_TYPE.I4"
+                },
+                {
+                "field_name": "Func_Cert",
+                "entitytypeid": "FUNCTION_CERTAINTY.I6"
+                },
+                {
+                "field_name": "Interpretation",
+                "entitytypeid": "INTERPRETATION_TYPE.I4"
+                },
+                {
+                "field_name": "Inter_Cert",
+                "entitytypeid": "INTERPRETATION_CERTAINTY.I6"
+                },
+                {
+                "field_name": "Condition",
+                "entitytypeid": "OVERALL_DAMAGE_SEVERITY_TYPE.E55"
+                },
+                {
+                "field_name": "Priority",
+                "entitytypeid": "PRIORITY_TYPE.E55"
                 }
                 ]
             }

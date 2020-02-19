@@ -1564,6 +1564,31 @@ class FindLocationForm(ResourceForm):
                 'LOCATION_TYPE.E55': Concept().get_e55_domain('LOCATION_TYPE.E55'),
             },
         }
+        
+# --- Measurements -> MeasurementvaluesForm ------------------------------------------
+class MeasurementvaluesFindsForm(ResourceForm):
+    @staticmethod
+    def get_info():
+        return {
+            'id': 'measurementvalues-finds',
+            'icon': 'fa-wrench',
+            'name': _('Measurements'),
+            'class': MeasurementvaluesFindsForm
+    }
+
+    def update(self, data, files):
+        self.update_nodes('MEASUREMENTS.E16', data)
+    
+    def load(self, lang):
+        if self.resource:
+            self.data['MEASUREMENTS.E16'] = {
+                'branch_lists': self.get_nodes('MEASUREMENTS.E16'),
+                'domains': {
+                    'MEASUREMENT_SOURCE_TYPE.E55' : Concept().get_e55_domain('MEASUREMENT_SOURCE_TYPE.E55'),
+                    'MEASUREMENT_UNIT.E58': Concept().get_e55_domain('MEASUREMENT_UNIT.E58'),
+                    'DIMENSION_TYPE.E55' : Concept().get_e55_domain('DIMENSION_TYPE.E55')
+                 }
+            }        
 
 class FindAssessmentForm(ResourceForm):
     @staticmethod

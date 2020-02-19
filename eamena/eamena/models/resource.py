@@ -103,7 +103,7 @@ class Resource(ArchesResource):
                 forms.FindAssessmentSummaryForm.get_info(),
                 forms.FindAssessmentForm.get_info(),
                 forms.FindLocationForm.get_info(),
-                forms.MeasurementvaluesForm.get_info(),
+                forms.MeasurementvaluesFindsForm.get_info(),
                 forms.RelatedFilesForm.get_info(),
                 forms.RelatedResourcesForm.get_info(),
             ]
