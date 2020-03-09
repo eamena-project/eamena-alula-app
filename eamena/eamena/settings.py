@@ -138,7 +138,7 @@ def RESOURCE_TYPE_CONFIGS():
             'icon_class': 'fa fa-delicious',
             'default_page': 'find-assessment',
             'default_description': _('No name available'),
-            'description_node': _('FIND_NOTES.E62'),
+            'description_node': _('FIND_CATEGORY_TYPE.E55'),
             'categories': [_('Resource')],
             'has_layer': True,
             'on_map': True,

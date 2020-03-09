@@ -175,6 +175,7 @@ def report(request, resourceid):
         'HERITAGE_RESOURCE_GROUP': [],
         'HERITAGE_FEATURE': [],
         'HERITAGE_COMPONENT': [],
+        'ARCHAEOLOGICAL_FIND': [],
         'ACTIVITY': [],
         'ACTOR': [],
         'HISTORICAL_EVENT': [],
@@ -237,6 +238,11 @@ def report(request, resourceid):
             for entity in related_resource['domains']:
                 if entity['entitytypeid'] == 'INFORMATION_RESOURCE_TYPE.E55':                            
                     related_res['relationship'].append(get_preflabel_from_valueid(entity['value'], lang)['value'])
+        elif related_resource['entitytypeid'] == 'ARCHAEOLOGICAL_FIND.E19':
+            for entity in related_resource['domains']:
+                if entity['entitytypeid'] == 'FIND_CATEGORY_TYPE.E55':
+                    related_res['relationship'].append(get_preflabel_from_valueid(entity['value'], lang)['value'])
+
   
             for entity in related_resource['child_entities']:
                 if entity['entitytypeid'] == 'FILE_PATH.E62':

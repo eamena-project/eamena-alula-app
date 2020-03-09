@@ -124,7 +124,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                 <div class="">
                     <i class="center-icon rounded-x fa fa-folder-open"></i>
                     <div class="">
-                        <h2 class="arches-report-section-header">{% trans "Heritage Feature" %}</h2>
+                        <h2 class="arches-report-section-header">{% trans "Archaeological Find" %}</h2>
                     </div> 
                 </div>
 
@@ -147,7 +147,7 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                                 <!-- Section sub-header -->
                                 <div class="col-sm-3">
-                                    <h3 class="arches-report-subsection">{% trans "Archaeological Assessment" %}</h3>
+                                    <h3 class="arches-report-subsection">{% trans "Find Assessment" %}</h3>
                                 </div>
                                 <!-- End Section sub-header -->
 
@@ -200,12 +200,12 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
 
                             <hr class="devider margin-top-10" style="margin-bottom: 5px;"></hr>
 
-                            <!--  Condition Section -->
+                            <!--  Location Section -->
                             <div class="row">
 
                                 <!-- Section sub-header -->
                                 <div class="col-sm-3">
-                                    <h3 class="arches-report-subsection">{% trans "Overall Condition" %}</h3>
+                                    <h3 class="arches-report-subsection">{% trans "Location" %}</h3>
                                 </div>
                                 <!-- End Section sub-header -->
 
@@ -216,107 +216,17 @@ along with this program. If not, see <http://www.gnu.org/licenses/>.
                                     <div class="arches-report-spacer hidden-xs"></div>
 
                                     <div class="arches-report-subsection-content">
-
-                                        <!-- Condition State -->
-                                        {% include 'views/reports/sections/E24_CONDITION_STATE.htm' %}
-
+                                       <!-- Feature forms-->
+                                        {% include 'views/reports/sections/FINDS_LOCATION.htm' %}
                                     </div>
-                                    <div class="arches-report-subsection-content">
-
-                                        <!-- Priority -->
-                                        {% include 'views/reports/sections/PRIORITY.htm' %}
-
-                                    </div>     
-                                    <div class="arches-report-subsection-content">
-
-                                        <!-- Remarks -->
-                                        {% include 'views/reports/sections/REMARKS.htm' %}
-
-                                    </div>                                                                             
+                                                                                                         
                                 </div>
                                 <!-- End Section Content-->
 
                             </div>
-                            <!-- End Condition Section --> 
-                            <!-- Damage Section -->
-                            <div class="row">
-
-                                <!-- Section sub-header -->
-                                <div class="col-sm-3">
-                                    <h3 class="arches-report-subsection">{% trans "Damage" %}</h3>
-                                </div>
-                                <!-- End Section sub-header -->
-
-                                 <!-- Section Content -->
-                                <div class="col-sm-9">
-
-                                    <!-- Spacer -->
-                                    <div class="arches-report-spacer hidden-xs"></div>
-
-                                    <div class="arches-report-subsection-content">
-
-                                        <!-- Damage Severity -->
-                                        {% include 'views/reports/sections/DAMAGE_SEVERITY.htm' %}
-
-                                    </div>
-                                     <div class="arches-report-subsection-content">
-
-                                        <!-- Damage extent -->
-                                        {% include 'views/reports/sections/DAMAGE_EXTENT.htm' %}
-
-                                    </div>
-                                     <div class="arches-report-subsection-content">
-
-                                        <!-- Disturbance type -->
-                                        {% include 'views/reports/sections/E24_DISTURBANCE_TYPE.htm' %}
-
-                                    </div>
-                                     <div class="arches-report-subsection-content">
-
-                                        <!-- Recommendations -->
-                                        {% include 'views/reports/sections/RECOMMENDATIONS.htm' %}
-
-                                    </div>                                                                                     
-                                </div>
-                                <!-- End Section Content-->
-
-                            </div>
-                            <!-- End Damage Section -->
-                        
-                            <!-- Risk Section -->
-                            <div class="row">
-
-                                <!-- Section sub-header -->
-                                <div class="col-sm-3">
-                                    <h3 class="arches-report-subsection">{% trans "Risk" %}</h3>
-                                </div>
-                                <!-- End Section sub-header -->
-
-                                 <!-- Section Content -->
-                                <div class="col-sm-9">
-
-                                    <!-- Spacer -->
-                                    <div class="arches-report-spacer hidden-xs"></div>
-
-                                    <div class="arches-report-subsection-content">
-
-                                        <!-- Risk -->
-                                        {% include 'views/reports/sections/RISK_IDENTIFICATION.htm' %}
-
-                                    </div>
-                                     <div class="arches-report-subsection-content">
-
-                                        <!-- Mitigation Strategy -->
-                                        {% include 'views/reports/sections/MITIGATION_STRATEGY.htm' %}
-
-                                    </div>                                                                            
-                                </div>
-                                <!-- End Section Content-->
-
-                            </div>
-                            <!-- End Risk Section -->
-
-
+                            <!-- End Location Section --> 
+                                                    
+                            
                             <hr class="devider margin-top-10" style="margin-bottom: 5px;"></hr>
                        
                     </div>

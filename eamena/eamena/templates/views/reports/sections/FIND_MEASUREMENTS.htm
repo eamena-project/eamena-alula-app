@@ -3,24 +3,28 @@
     <div class="col-xs-12">
         <dl>
             <dt>
-                <h5 id="" class="arches-report-subsection-title hidden">{% trans "Measurements" %}</h5>
+                    <h5 id="" class="arches-report-subsection-title">{% trans "Dimension" %}</h5>
             </dt>
-
-            {% if 'MEASUREMENT_TYPE_E55' not in report_info.source.graph %}
-                <dd class="arches-report-subsection-item">
-                    {% trans "No measurements recorded" %}
-                </dd>
-            {% else %}
-                {% for MEASUREMENT_TYPE_E55 in report_info.source.graph.MEASUREMENT_TYPE_E55 %}
-                    <dd class="arches-report-subsection-item">
-                        <span class="arches-report-subsection-item-type">{{ MEASUREMENT_TYPE_E55.MEASUREMENT_TYPE_E55__value }}:</span>
-                        {{ MEASUREMENT_TYPE_E55.VALUE_OF_MEASUREMENT_E60__value }} {{ MEASUREMENT_TYPE_E55.UNIT_OF_MEASUREMENT_E55__value }}
-                    </dd>
-                    {% empty %}
-                {% endfor %}            
+            <div class = "content"> 
+            {% if 'MEASUREMENTS_E16' in report_info.source.graph %}
+                {% for MEASUREMENTS_E16 in report_info.source.graph.MEASUREMENTS_E16 %}
+                   
+                    {% if 'DIMENSION_E54' in MEASUREMENTS_E16 %}
+                        {% for DIMENSION_E54 in MEASUREMENTS_E16.DIMENSION_E54 %}
+                            
+                            <dd class="arches-report-subsection-item">
+                                {{ DIMENSION_E54.DIMENSION_TYPE_E55.0.DIMENSION_TYPE_E55__label }}:  {{ DIMENSION_E54.NUMBER_E60.0.NUMBER_E60__label }} {{ DIMENSION_E54.MEASUREMENT_UNIT_E58.0.MEASUREMENT_UNIT_E58__label }}
+                            </dd>
+                        {% endfor %}
+                    {% else %}
+                        <dd class="arches-report-subsection-item">{% trans "No measurements recorded" %}</dd>
+                    {% endif %}
+                {% endfor %}
             {% endif %}
-
+            </div>
         </dl>
-
     </div>
 </div>
+
+
+           
